@@ -1,0 +1,124 @@
+<html>
+<head>
+	<title>Ruffle - Anonymous Picture Messaging to Any Phone Number </title>
+	<meta name="description" content="Send an Anonymous Picture Message to any Phone Number via SMS. Start Ruffling your friends.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="icon" type="image/png" href="/favicon.ico">
+
+	<!-- Facebook Open Graph meta -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://ruffle.us">
+	<meta property="og:title" content="Ruffle - Send an Anonymous Picture Message to Any Phone Number">
+	<meta property="og:description" content="Send an Anonymous Picture Message to any Phone Number via SMS. Start Ruffling your friends.">
+	<meta property="og:image" content="http://ruffle.us/ruffle-og.jpg">
+	<meta property="og:site_name" content=“Ruffle”>
+
+	<!-- Twitter Cards meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@ruffleapp">
+	<meta name="twitter:url" content="http://ruffle.us">
+	<meta name="twitter:title" content="Ruffle - Send an Anonymous Picture Message to Any Phone Number">
+	<meta name="twitter:description" content="Send an Anonymous Picture Message to any Phone Number via SMS. Start Ruffling your friends.">
+	<meta name="twitter:image:src" content="http://ruffle.us/ruffle-og.jpg">
+
+	<link rel="stylesheet" href="/css/ruffle.css">
+	<link rel="stylesheet" href="/plib/Dropit-master/dropit.css" type="text/css"/>
+</head>
+<body>
+	<div class="background">
+		<div class="column">
+
+			<div class="title">
+				<img class="title-img" src="/images/title.png"/>
+			</div>
+
+			<p class="about">
+				Send an anonymous picture message to anyone with a phone number. <b>You know who you're sending it to. They won't know who sent it!</b>
+			</p>
+
+			<div class="guarantee">
+				<span class="fa fa-lock"></span> 100% Anonymous
+			</div>
+
+			<form id="ruffleform" action="/upload/{{=it.photoId}}" method="post" enctype="multipart/form-data">
+				
+			<div class="ph">
+
+				<select id="countrycode" name="cell_countrycode" class="form-control input-lg ng-pristine ng-valid ng-valid-required" ng-model="formData.cell_countrycode"ng-cell-country-filter="">
+				    <option value="AU" selected="">AU</option>
+				    <option value="CA">CA</option>
+				    <!-- <option value="GB">UK</option> -->
+				    <option value="US">US</option>
+				</select>
+
+				<ul class="dropit menu">
+				    <li>
+				        <a class="dropit-trigger" href="#"><span class="seltext">AU</span> <span class="fa fa-caret-down"></span></a>
+				        <ul class="dropit-submenu">
+				            <li><a href="#">AU</a></li>
+				            <li><a href="#">CA</a></li>
+				            <li><a href="#">UK</a></li>
+				            <li><a href="#">US</a></li>
+				        </ul>
+				    </li>
+				</ul>
+
+				<input type"text" name="phonenumber" id="phonenumber"/><br/>
+				<div class="error error-number">Please enter a valid phone number.
+				</div>
+			</div>
+
+			<div class="phup">
+				<img class="ruffle-small" src="http://s3.amazonaws.com/ruffle/{{=it.photoId}}"/>
+			</div>
+				<!-- <br/> -->
+				<!-- <input id="sendruffle" type="submit" value="Send Ruffle"> -->
+			</form>	
+			<button id="submit-ruffle"><span class="spinny fa fa-rocket"></span> <span class="sub-text">Send Ruffle</span></button>
+
+			<div class="sharing">
+				<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=http://ruffle.us" target="_blank"><span class="fa fa-facebook-square"></span> Share</a>
+				<a class="twit" href="https://twitter.com/home?status=Send%20An%20Anonymous%20Picture%20Message%20To%20Anyone%20With%20A%20Phone%20Number!%20http://ruffle.us/" target="_blank"><span class="fa fa-twitter"></span> Tweet</a>
+			</div>
+			<div class="faq-title">
+				What is this?
+			</div>
+			<div class="faq">
+				Ruffle lets you send an anonymous picture message to anyone with a phone number via SMS. You’ll know who you’re sending it to, but they won’t know who’s Ruffling them.
+			</div>
+			<div class="faq-title">
+				How Anonymous Is Ruffle?
+			</div>
+			<div class="faq">
+				We don’t record or attach any information about a message sender. When you send someone a Ruffle, they will receive an SMS from “Ruffle.us” or an anonymous phone number. Unless you send a photo of your face, they will have no idea who sent it.
+			</div>
+			<div class="faq-title">
+				Want to chat?
+			</div>
+			<div class="faq twits">
+				<a class="contact-link" href="http://www.twitter.com/nickdrewe" target="_blank">@nickdrewe</a> <a class="contact-link" href="http://www.twitter.com/_mattway" target="_blank">@_mattway</a>
+			</div>
+			<div class="faq">
+				Send us an email at <a class="contact-link" href="mailto:rufflesms@gmail.com">rufflesms@gmail.com</a>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/plib/phonecheck/js/libphonenumber.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/plib/phonecheck/js/phonecheck.js"></script>
+	<script src="/plib/Dropit-master/dropit.js"></script>	
+	<script type="text/javascript" src="/js/reruffle.js"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-49955133-1', 'ruffle.us');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

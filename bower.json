@@ -1,0 +1,21 @@
+{
+  "name": "ruffle",
+  "version": "0.0.0",
+  "homepage": "ruffle.us",
+  "authors": [
+    "Matt Way / Nick Drewe"
+  ],
+  "description": "Send pictures anonymously to anyone",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0"
+  }
+}

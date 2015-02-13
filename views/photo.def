@@ -1,0 +1,87 @@
+<html>
+<head> 
+	<title>Ruffle - Anonymous Picture Messaging to Any Phone Number</title>
+	<meta name="description" content="Send an Anonymous Picture Message to any Phone Number via SMS. Start Ruffling your friends.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="icon" type="image/png" href="favicon.ico">
+
+	<!-- Facebook Open Graph meta -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://ruffle.us/p/{{=it.photoId}}">
+	<meta property="og:title" content="Someone Ruffled Me With This Anonymous Picture Message!">
+	<meta property="og:description" content="Send an Anonymous Picture Message to any Phone Number via SMS. Start Ruffling your friends.">
+	<meta property="og:image" content="http://s3.amazonaws.com/ruffle/{{=it.photoId}}">
+	<meta property="og:site_name" content="Ruffle">
+
+	<!-- Twitter Cards meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@ruffleapp">
+	<meta name="twitter:url" content="http://ruffle.us/p/{{=it.photoId}}">
+	<meta name="twitter:title" content="Someone Ruffled Me With This Anonymous Picture Message!">
+	<meta name="twitter:description" content="Send an Anonymous Picture Message to any Phone Number via SMS. Start Ruffling your friends.">
+	<meta name="twitter:image:src" content="http://s3.amazonaws.com/ruffle/{{=it.photoId}}">
+
+	<link rel="stylesheet" href="/css/ruffle.css">
+</head>
+<body>
+	<div class="background">
+		<div class="column">
+
+			<div class="title">
+				<img class="title-img" src="/images/title.png"/>
+			</div>
+
+			<p class="about">
+				You have received this anonymous Ruffle (picture message) from one of your friends. 
+			</p>
+
+			<img class="ruffle" src="http://s3.amazonaws.com/ruffle/{{=it.photoId}}"/>
+
+			<div class="gapme">
+				<a class="btn" href="http://ruffle.us"><span class="fa fa-camera"></span> Send someone a Ruffle</a>
+			</div>
+			<div class="gapme">
+				<a class="btn" href="http://ruffle.us/reruffle/{{=it.photoId}}"><span class="fa fa-camera"></span> Re-Ruffle this photo</a>
+			</div>
+
+			<div class="sharing">
+				<a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=http://ruffle.us/p/{{=it.photoId}}" target="_blank"><span class="fa fa-facebook-square"></span> Share</a>
+				<a class="twit" href="https://twitter.com/home?status=Someone%20Ruffled%20me!%20Check%20it%20out!%20http://ruffle.us/p/{{=it.photoId}}%20%23ruffle" target="_blank"><span class="fa fa-twitter"></span>Twitter</a>
+			</div>
+
+			<div class="faq-title">
+				What is this?
+			</div>
+			<div class="faq">
+				Ruffle lets you send an anonymous picture message to anyone with a phone number via SMS. You’ll know who you’re sending it to, but they won’t know who’s Ruffling them.
+			</div>
+			<div class="faq-title">
+				How Anonymous Is Ruffle?
+			</div>
+			<div class="faq">
+				We don’t record or attach any information about a message sender. When you send someone a Ruffle, they will receive an SMS from “Ruffle.us” or an anonymous phone number. Unless you send a photo of your face, they will have no idea who sent it.
+			</div>
+			<div class="faq-title">
+				Want to chat?
+			</div>
+			<div class="faq twits">
+				<a class="contact-link" href="http://www.twitter.com/nickdrewe" target="_blank">@nickdrewe</a> <a class="contact-link" href="http://www.twitter.com/_mattway" target="_blank">@_mattway</a>
+			</div>
+			<div class="faq">
+				Send us an email at <a class="contact-link" href="mailto:rufflesms@gmail.com">rufflesms@gmail.com</a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-49955133-1', 'ruffle.us');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>
