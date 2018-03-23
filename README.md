@@ -1,6 +1,8 @@
 ruffle
 ======
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zuphu/ruffle.svg)](https://greenkeeper.io/)
+
 Send anonymous pictures to anyone via their phone number.
 
 Pre-requisites to run locally:
